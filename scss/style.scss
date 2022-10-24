@@ -1,0 +1,56 @@
+@import "reset";
+@import "common";
+@import "variables";
+@import "backup";
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+body {
+	display: flex;
+	@include font-normal;
+}
+
+#wrap {
+	width: 100%;
+	display: flex;
+}
+
+#sidebar {
+	flex-shrink: 0;
+	width: 320px;
+	height: 100%;
+	background-color: #ffffff;
+	border-right: 1px solid #dddddd;
+
+	h1 {
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		font-size: 32px;
+		color: #444444;
+
+		a {
+			padding-top: 40px;
+			padding-bottom: 20px;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+			@include font-bold;
+
+			span {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+#content {
+	width: 100%;
+}
