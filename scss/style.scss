@@ -1,16 +1,18 @@
 @import "reset";
 @import "common";
 @import "variables";
-@import "backup";
+@import "sidebar/category";
+@import "sidebar/sidebar";
+
+/*
+ * MY CUSTOM CODE
+ * -- START
+ */
 
 html,
 body {
 	width: 100%;
 	min-height: 100vh;
-}
-
-body {
-	display: flex;
 	@include font-normal;
 }
 
@@ -19,38 +21,114 @@ body {
 	display: flex;
 }
 
-#sidebar {
-	flex-shrink: 0;
-	width: 320px;
-	height: 100%;
-	background-color: #ffffff;
-	border-right: 1px solid #dddddd;
+.entry-content table:not(.hljs-ln) {
+	width: 100%;
+	margin-bottom: 22px;
+	border: 1px solid #e6e6e6;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 0.9375em;
+	line-height: 1.5714;
+	color: #666;
+}
+.entry-content table:not(.hljs-ln) thead th {
+	padding: 7px 0 11px;
+	border-left: 1px solid #e6e6e6;
+}
+.entry-content table:not(.hljs-ln) tbody td {
+	padding: 7px 0 11px;
+	border-left: 1px solid #e6e6e6;
+	border-top: 1px solid #e6e6e6;
+}
 
-	h1 {
-		width: 100%;
-		justify-content: center;
-		align-items: center;
-		font-size: 32px;
-		color: #444444;
+pre {
+	margin: 0;
+}
 
-		a {
-			padding-top: 40px;
-			padding-bottom: 20px;
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-			height: 100%;
-			justify-content: center;
-			align-items: center;
-			@include font-bold;
+pre code.hljs {
+	font-family: "Poppins", "NEXON Lv1 Gothic OTF", monospace;
+	letter-spacing: 1px;
+	font-size: 12px;
+	border-radius: 5px;
+	padding: 15px !important;
+	margin: 10px 0;
+	box-shadow: 0 0 6px 0 #ddd;
+	line-height: 20px;
+}
 
-			span {
-				margin-top: 20px;
-			}
-		}
-	}
+.hljs-ln-line.hljs-ln-numbers {
+	padding-right: 10px;
+	color: #ff976d;
+	text-align: right;
+	width: 30px;
 }
 
 #content {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 0 100px;
+	margin: 0 auto;
+}
+
+#content-inner {
+	display: flex;
+	flex-direction: column;
+	max-width: 1280px;
 	width: 100%;
 }
+
+#content-inner #body {
+	width: 100%;
+}
+
+/* pre { padding: 10px; margin: 5px 0; max-width: 100%; overflow-x: auto; overflow-y: hidden; border: 1px solid #ddd; font: 12px/180% 'Lucida Console'; background-color: #fafafa; border-radius: 3px; } */
+/*
+ * MY CUSTOM CODE
+ * -- END
+ */
+
+/*
+ * RESPONSIVE CUSTOM CODE
+ * -- START
+ */
+
+@media screen and (max-width: 1600px) {
+	#content-inner {
+		max-width: 960px;
+	}
+
+	#content {
+		padding: 0 40px;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	#sidebar {
+		position: fixed;
+		left: -320px;
+		z-index: 999;
+		transition: left 0.3s;
+		height: 100%;
+		overflow-y: scroll;
+	}
+
+	#sidebar.on {
+		left: 0;
+	}
+
+	.sidebar-switch {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#content {
+		padding: 0 20px;
+	}
+}
+
+/*
+ * RESPONSIVE CUSTOM CODE
+ * -- END
+ */

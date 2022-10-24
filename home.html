@@ -55,7 +55,7 @@ lightbox.options.albumLabel = "%1 / %2";
 <link rel="alternate" type="application/rss+xml" title="GRIDY" href="https://gridy.kr/rss">
 <link rel="shortcut icon" href="/favicon.ico">
 
-<link rel="stylesheet" href="https://tistory3.daumcdn.net/tistory/4071388/skin/style.css?_T_=1666460498">
+<link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css">
 <!--[if IE 7]>
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome-ie7.min.css">
@@ -241,7 +241,7 @@ document.onkeypress = getKey;
 				<ul class="tt_category">
 	<li class="">
 		<a class="link_tit" href="/category">
-			전체보기			
+			All			
 							<img src="https://t1.daumcdn.net/tistory_admin/assets/blog/tistory-1711a478104fe0edfa9d79098074359dcb1144d2/blogs/image/category/new_ico_5.gif?_version_=tistory-1711a478104fe0edfa9d79098074359dcb1144d2" alt="N" style="vertical-align:middle;padding-left:2px;">
 					</a>
 
@@ -466,16 +466,23 @@ document.onkeypress = getKey;
 </ul>
 			</div>
 			
-			<div class="widget"> <!-- Blog Menu -->
-				<ul>		<li class="t_menu_home first">
-			<a href="/">홈</a>
-		</li>
-				<li class="t_menu_tag">
-			<a href="/tag">태그</a>
-		</li>
+			<div class="widget menu"> <!-- Blog Menu -->
+		<ul>
+			<li class="t_menu_home first">
+				<a href="/">
+					<ion-icon name="home-sharp"></ion-icon>
+				</a>
+			</li>
+			<li class="t_menu_tag">
+				<a href="/tag">
+					<ion-icon name="bookmark-sharp"></ion-icon>
+				</a>
+			</li>
 				<li class="t_menu_guestbook last">
-			<a href="/guestbook">방명록</a>
-		</li>
+					<a href="/guestbook">
+						<ion-icon name="clipboard-sharp"></ion-icon>
+					</a>
+			</li>
 		</ul>
 			</div>
 			 <!-- Notice -->
@@ -1324,73 +1331,6 @@ document.onkeypress = getKey;
 
 
 <div id="sidebar-toggle"><i class="icon-reorder"></i></div>
-<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-<!-- ######################### -->
-<!-- GRIDY CUSTOM SCRIPT START -->
-<!-- ######################### -->
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-<script>
-	// GRIDY CUSTOM SIDEBAR CODE
-	var sidebarStatus = false;
-	const sidebar = $("#sidebar");
-	const sidebarSwitch = $("#sidebarSwitch");
-	sidebarSwitch.on("click", function () {
-		sidebarStatus = !sidebarStatus;
-		sidebar.toggleClass("on");
-		sidebarSwitch.toggleClass("on");
-
-		if (sidebarStatus) {
-			sidebarSwitch.html('<ion-icon name="close-sharp"></ion-icon>');
-		} else {
-			sidebarSwitch.html('<ion-icon name="menu-sharp"></ion-icon>');
-		}
-	});
-</script>
-<style>
-	.adblock-out {
-		display: fixed;
-		width: 100vw;
-		height: 100vh;
-		background-color: #FFFFFF;
-		display: none;
-	}
-
-	.adblock-out.on {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-
-	.adblock-out button {
-		font-family: "NEXON Lv1 Gothic OTF";
-		width: 600px;
-		height: 100px;
-		border-radius: 10px;
-		background-color: #DD7777;
-		border: 0;
-		cursor: pointer;
-		font-size: 24px;
-		color: #FFFFFF;
-	}
-</style>
-<script>
-window.onload = () => {
-	$("#refreshButton").on("click", function () {
-		window.location.reload();
-	});
-	function errorCheck () {
-		if (!window.adsbygoogle.hasOwnProperty('push')) {
-			$(".adblock-out").addClass("on");
-			$("#wrap").remove();
-		}
-	}
-	errorCheck();
-}
-</script>
-<!-- ####################### -->
-<!-- GRIDY CUSTOM SCRIPT END -->
-<!-- ####################### -->
 <script src="//search1.daumcdn.net/search/statics/common/js/g/search_dragselection.min.js"></script>
 <script>
   (function () {
@@ -1485,4 +1425,75 @@ window.onload = () => {
 	}
 	// ]]>
 </script>
-<iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20221019/r20190131/zrt_lookup.html" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20221019/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
+<iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20221019/r20190131/zrt_lookup.html" style="display: none;"></iframe>
+
+
+<!-- ######################### -->
+<!-- GRIDY CUSTOM SCRIPT START -->
+<!-- ######################### -->
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+	// GRIDY CUSTOM SIDEBAR CODE
+	var sidebarStatus = false;
+	const sidebar = $("#sidebar");
+	const sidebarSwitch = $("#sidebarSwitch");
+	sidebarSwitch.on("click", function () {
+		sidebarStatus = !sidebarStatus;
+		sidebar.toggleClass("on");
+		sidebarSwitch.toggleClass("on");
+
+		if (sidebarStatus) {
+			sidebarSwitch.html('<ion-icon name="close-sharp"></ion-icon>');
+		} else {
+			sidebarSwitch.html('<ion-icon name="menu-sharp"></ion-icon>');
+		}
+	});
+</script>
+<style>
+	.adblock-out {
+		display: fixed;
+		width: 100vw;
+		height: 100vh;
+		background-color: #FFFFFF;
+		display: none;
+	}
+
+	.adblock-out.on {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.adblock-out button {
+		font-family: "NEXON Lv1 Gothic OTF";
+		width: 600px;
+		height: 100px;
+		border-radius: 10px;
+		background-color: #DD7777;
+		border: 0;
+		cursor: pointer;
+		font-size: 24px;
+		color: #FFFFFF;
+	}
+</style>
+<script>
+window.onload = () => {
+	$("#refreshButton").on("click", function () {
+		window.location.reload();
+	});
+	function errorCheck () {
+		if (!window.adsbygoogle.hasOwnProperty('push')) {
+			$(".adblock-out").addClass("on");
+			$("#wrap").remove();
+		}
+	}
+	errorCheck();
+}
+</script>
+<!-- ####################### -->
+<!-- GRIDY CUSTOM SCRIPT END -->
+<!-- ####################### -->
+
+</body><iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20221019/r20190131/zrt_lookup.html" style="display: none;"></iframe></html>
