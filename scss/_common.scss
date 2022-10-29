@@ -22,6 +22,30 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "KBIZHanmaumMyungjo";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GowunBatang";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "GowunBatang";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff")
+		format("woff");
+	font-weight: bold;
+	font-style: normal;
+}
+
 @mixin font-light {
 	font-family: "NEXON Lv1 Gothic OTF Light", sans-serif;
 }
@@ -32,6 +56,11 @@
 
 @mixin font-bold {
 	font-family: "NEXON Lv1 Gothic OTF Bold", sans-serif;
+}
+
+@mixin font-content {
+	font-family: "GowunBatang", serif;
+	line-height: 1.5;
 }
 
 a {

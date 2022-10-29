@@ -151,6 +151,24 @@ table {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "KBIZHanmaumMyungjo";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/KBIZHanmaumMyungjo.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GowunBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GowunBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -201,25 +219,25 @@ a {
   flex-shrink: 0;
   width: 320px;
   min-height: 100vh;
-  background-color: #eeeeee;
-  border-left: 1px solid #eeeeee;
+  background-color: #333333;
+  border-left: 1px solid #555555;
 }
 
 #sidebar h1 {
   width: 100%;
+  height: 230px;
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  color: #444444;
-  background-color: #ffffff;
+  color: #ffffff;
 }
 
 #sidebar h1 a {
+  width: 100%;
   padding-top: 40px;
   padding-bottom: 20px;
   display: flex;
   flex-direction: column;
-  width: 100%;
   justify-content: center;
   align-items: center;
   font-family: "NEXON Lv1 Gothic OTF Bold", sans-serif;
@@ -227,6 +245,33 @@ a {
 
 #sidebar h1 a span {
   margin-top: 30px;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #333333;
+  border-top: 1px solid #555555;
+  border-bottom: 1px solid #555555;
+}
+.menu ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.menu ul li {
+  width: 33.33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu ul li + li {
+  border-left: 1px solid #555555;
+}
+.menu ul li a {
+  color: #ffffff;
 }
 
 .sidebar-switch {
@@ -253,28 +298,8 @@ a {
   color: #ffffff;
 }
 
-.menu {
-  display: flex;
-  width: 100%;
-  height: 80px;
-  background-color: #444444;
-}
-.menu ul {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-.menu ul li {
-  width: 33.33%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.menu ul li + li {
-  border-left: 1px solid #888888;
-}
-.menu ul li a {
+.counter {
+  font-size: 24px;
   color: #ffffff;
 }
 
@@ -357,10 +382,16 @@ pre code.hljs {
   width: 100%;
 }
 
-#content-inner .content-title {
+#content-inner #body.entry {
+  font-family: "GowunBatang", serif;
+  line-height: 1.5;
+}
+
+.content-title {
   width: 100%;
-  height: 200px;
-  background-color: #444444;
+  height: 300px;
+  border: 1px solid #555555;
+  background-color: #333333;
   color: white;
   display: flex;
   font-size: 64px;

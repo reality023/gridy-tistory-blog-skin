@@ -82,10 +82,15 @@ pre code.hljs {
 	width: 100%;
 }
 
-#content-inner .content-title {
+#content-inner #body.entry {
+	@include font-content;
+}
+
+.content-title {
 	width: 100%;
-	height: 200px;
-	background-color: #444444;
+	height: 300px;
+	border: 1px solid #555555;
+	background-color: #333333;
 	color: white;
 	display: flex;
 	font-size: 64px;
