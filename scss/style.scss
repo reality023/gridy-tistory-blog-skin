@@ -16,6 +16,11 @@ body {
 	@include font-normal;
 }
 
+input,
+button {
+	@include font-normal;
+}
+
 #wrap {
 	width: 100%;
 	display: flex;
@@ -115,7 +120,7 @@ pre code.hljs {
 	}
 
 	#content {
-		padding: 0 40px;
+		// padding: 0 40px;
 	}
 }
 
